@@ -1,3 +1,0 @@
-changes from 4.0.2.1 to 4.3.0.67:
-- minor adjustment in smali/com/amazon/kcp/application/AndroidDeviceInformationProvider.smali
-  to make the patch apply cleanly

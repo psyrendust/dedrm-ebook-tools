@@ -1,9 +1,22 @@
-# DRM Removal Tools for eBooks v6.0.4
+# DRM Removal Tools for eBooks v6.0.8
 This repository is a copy of the tools downloaded from [Apprentice Alf's Blog](http://www.apprenticealf.wordpress.com). I am not the author of these tools. I just wanted to keep them in a safe place. More info is at Apprentice Alf's blog post ["DRM Removal Tools for eBooks"](http://apprenticealf.wordpress.com/2012/09/10/drm-removal-tools-for-ebooks/).
 
 # Notes
 - I've changed the ReadMe_First.txt to readme.md
 - Updated the readme.md with change notes and also citing the original author of the tools
+
+## Changes in 6.0.8:
+- Fixes invalid topaz files
+
+## Changes in 6.0.7:
+- Fixes wine key creation folder issue.
+- Fixes DeDRM of PDFs with broken metadata.
+
+## Changes in 6.0.6:
+- Fixed up an incorrect function call. (Only relevant for Linux users using Wine)
+
+## Changes in 6.0.5:
+- Fixed a problem that resulted in key issues (thanks, Paul)
 
 ## Changes in 6.0.4:
 - Fixed a problem in the plugin converting earlier preferences (thanks, enno)
@@ -23,7 +36,7 @@ This repository is a copy of the tools downloaded from [Apprentice Alf's Blog](h
 Welcome to the tools!
 =====================
 
-This readme.md is meant to give users a quick overview of what is available and how to get started. This document is part of the Tools v6.0.4 archive from Apprentice Alf's Blog: http://apprenticealf.wordpress.com/
+This readme.md is meant to give users a quick overview of what is available and how to get started. This document is part of the Tools v6.0.5 archive from Apprentice Alf's Blog: http://apprenticealf.wordpress.com/
 
 The is archive includes tools to remove DRM from:
 
@@ -39,55 +52,55 @@ These tools do NOT work with Apple's iBooks FairPlay DRM (see end of this file.)
 
 About the tools
 ---------------
-These tools have been updated and maintained by Apprentice Alf, DiapDealer and some_updates. You can find the latest updates and get support at Apprentice Alf's blog: http://www.apprenticealf.wordpress.com/  
+These tools have been updated and maintained by Apprentice Alf, DiapDealer and some_updates. You can find the latest updates and get support at Apprentice Alf's blog: http://www.apprenticealf.wordpress.com/
 If you re-post these tools, a link to the blog would be appreciated.
 
-The original inept and ignoble scripts were by i♥cabbages  
-The original mobidedrm and erdr2pml scripts were by The Dark Reverser  
-The original topaz DRM removal script was by CMBDTC  
-The original topaz format conversion scripts were by some_updates, clarknova and Bart Simpson  
-The Scuolabooks tool is by Hex  
-The calibre plugin conversions were originally by DiapDealer  
+The original inept and ignoble scripts were by i♥cabbages
+The original mobidedrm and erdr2pml scripts were by The Dark Reverser
+The original topaz DRM removal script was by CMBDTC
+The original topaz format conversion scripts were by some_updates, clarknova and Bart Simpson
+The Scuolabooks tool is by Hex
+The calibre plugin conversions were originally by DiapDealer
 
-The DeDRM plugin is by Apprentice Alf based on plugins by DiapDealer  
-The DeDRM AppleScript application is by Apprentice Alf  
-The DeDRM python GUI is by some_updates and Apprentice Alf  
+The DeDRM plugin is by Apprentice Alf based on plugins by DiapDealer
+The DeDRM AppleScript application is by Apprentice Alf
+The DeDRM python GUI is by some_updates and Apprentice Alf
 
 Many fixes, updates and enhancements to the scripts and applicatons have been by Apprentice Alf, some_updates and DiapDealer and others.
 
 
 DeDRM plugin for calibre (Mac OS X, Windows, and Linux)
 -------------------------------------------------------
-If you already use calibre, the quickest and easiest way, especially on Windows, to remove DRM from your ebooks is to install the DeDRM plugin from the `DeDRM_calibre_plugin` folder, following the instructions and configuration directions provided in the ReadMe and the help links.
+If you already use calibre, the quickest and easiest way, especially on Windows, to remove DRM from your ebooks is to install the DeDRM plugin from the DeDRM_calibre_plugin folder, following the instructions and configuration directions provided in the ReadMe and the help links.
 
 Once installed and configured, you can simply add a DRM book to calibre and the DeDRMed version will be imported into the calibre database. Note that DRM removal ONLY occurs on import. If you have already imported DRM books you'll need to remove them from calibre and re-import them.
 
-These plugins work for Windows, Mac OS X and Linux. For ebooks from Kindle 4 PC and Adobe Digital Editions, Linux users should read the section at the end the `DeDRM_plugin_ReadMe.txt` file.
+These plugins work for Windows, Mac OS X and Linux. For ebooks from Kindle 4 PC and Adobe Digital Editions, Linux users should read the section at the end the DeDRM_plugin_ReadMe.txt file.
 
 
 DeDRM application for Mac OS X users: (Mac OS X 10.4 and above)
 ---------------------------------------------------------------
 This application is a stand-alone application for Mac OS X users.
 
-Drag the `DeDRM.app` application from the `DeDRM_Macintosh_Application` folder to your Desktop (or your Applications Folder, or anywhere else you find convenient). Double-click on the application to run it and you will be able to enter any configuration data needed to remove DRM from  your type of DRMed ebooks.
+Drag the "DeDRM.app" application from the DeDRM_Macintosh_Application folder to your Desktop (or your Applications Folder, or anywhere else you find convenient). Double-click on the application to run it and you will be able to enter any configuration data needed to remove DRM from  your type of DRMed ebooks.
 
 To use the DeDRM application simply drag ebooks and/or folders containing ebooks onto the DeDRM application and it will remove the DRM and save DRM-free versions of the books wherever you selected in the Output Folder configuration dialog.
 
-For more detailed instructions, see the `DeDRM ReadMe.rtf` file in the `DeDRM_Application_Macintosh` folder, including details of the extra step that Mac OS X 10.4 users need to take to use the application.
+For more detailed instructions, see the "DeDRM ReadMe.rtf" file in the DeDRM_Application_Macintosh folder, including details of the extra step that Mac OS X 10.4 users need to take to use the application.
 
 
 DeDRM application for Windows users: (Windows XP through Windows 8)
 ------------------------------------------------------------------
-***This program requires that Python and PyCrypto be properly installed.***  
+***This program requires that Python and PyCrypto be properly installed.***
 ***See below for details on recommended versions and how to install them.***
 
 This application is a stand-alone application for Windows users.
 
-Drag the `DeDRM_App` folder that's in the `DeDRM_Windows_Application` folder, to your `My Documents` folder (or anywhere else you find convenient). Make a short-cut on your Desktop of the `DeDRM_Drop_Target.bat` file that's in the `DeDRM_App` folder. Double-click on the shortcut and the DeDRM application will run and you will be able to enter any configuration data needed to remove DRM from your type of DRMed ebooks.
+Drag the DeDRM_App folder that's in the DeDRM_Windows_Application folder, to your "My Documents" folder (or anywhere else you find convenient). Make a short-cut on your Desktop of the DeDRM_Drop_Target.bat file that's in the DeDRM_App folder. Double-click on the shortcut and the DeDRM application will run and you will be able to enter any configuration data needed to remove DRM from  your type of DRMed ebooks.
 
-To use the DeDRM application simply drag ebooks or folders containing ebooks onto the `DeDRM_Drop_Target.bat` shortcut and it will remove the DRM and save DRM-free versions of the books wherever you selected in the Output Folder configuration dialog.
+To use the DeDRM application simply drag ebooks or folders containing ebooks onto the DeDRM_Drop_Target.bat shortcut and it will remove the DRM and save DRM-free versions of the books wherever you selected in the Output Folder configuration dialog.
 
-For more detailed instructions, see the `DeDRM_App_ReadMe.txt` file in the `DeDRM_Windows_Applications` folder.
+For more detailed instructions, see the DeDRM_App_ReadMe.txt file in the DeDRM_Windows_Applications folder.
 
 
 Other_Tools
