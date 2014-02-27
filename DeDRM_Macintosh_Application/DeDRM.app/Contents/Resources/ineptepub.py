@@ -480,6 +480,7 @@ def gui_main():
         import Tkinter
         import Tkconstants
         import tkMessageBox
+        import tkFileDialog
         import traceback
     except:
         return cli_main()
